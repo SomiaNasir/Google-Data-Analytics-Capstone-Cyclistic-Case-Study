@@ -33,4 +33,6 @@ I will use Cyclistic’s historical trip data to analyze and identify trends fro
   
 This is public data that can be used to explore how different customer types are using Cyclistic bikes. But note that data-privacy issues prohibit from using riders’ personally identifiable information. This means that we won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
 ### Data Organization
-File naming convection is YYYYMM-divvy-tripdata. There are total of 12 files each for months ranging from Jan 2022 to Dec 2022. 
+There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file contains one month information like ride id, bike type, start time, end time, start station, end station, start location, end location and whether the rider is casual or member. The respective column names are ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng and member_casual.
+
+## Process
