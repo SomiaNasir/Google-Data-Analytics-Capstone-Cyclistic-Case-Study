@@ -36,3 +36,4 @@ This is public data that can be used to explore how different customer types are
 There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file contains one month information like ride id, bike type, start time, end time, start station, end station, start location, end location and whether the rider is casual or member. The respective column names are ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng and member_casual.
 
 ## Process
+I have used Google's BigQuery to combine and clean the data 
