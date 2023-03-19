@@ -48,8 +48,24 @@ Observations:
 1. The table below shows the all column names and their data types. The __ride_id__ column is our primary key.  
 
    ![image](https://user-images.githubusercontent.com/125132307/226139161-c5209861-7542-4ad6-8d9a-ce0115086e4d.png)  
+
+2. The following table shows number of __null values__ in each column.  
    
-2. There are no __duplicate__ rows in the data.  
-3. All __Ride_id__ values have length of 16 with no null values.
+   ![image](https://user-images.githubusercontent.com/125132307/226182623-1f3378b1-c4b2-403e-8a41-7916aacd3666.png)
+
+   Note that some columns have same number of missing values. This may be due to missing information in the same row i.e. station's name and id for the same station and latitude and longitude for the same ending station.  
+3. As ride_id has no null values, let's use it to check for duplicates.  
+
+   ![image](https://user-images.githubusercontent.com/125132307/226181500-38f9b3ca-811d-4612-87ea-87b6d1d3843e.png)
+
+   There are no __duplicate__ rows in the data.  
+   
+4. All __ride_id__ values have length of 16 so no need to clean it.
+5. There are 3 unique types of bikes(__rideable_type__) in our data.
+
+   ![image](https://user-images.githubusercontent.com/125132307/226182167-6dda2319-09b6-4572-97d1-16e17b30c329.png)
+
+6. The started_at and ended_at shows start and end time of the trip in YYYY-MM-DD hh:mm:ss UTC format. New column ride_length can be created to find the total trip duration. As for now, there is no trip which has duration longer than a day. However, there are 127793 trips having less than a minute duration or having end time earlier than start time so need to remove them. Another column day_of_week can also be helpful in analysis of trips at different days in a week.
+7. 
 
    
