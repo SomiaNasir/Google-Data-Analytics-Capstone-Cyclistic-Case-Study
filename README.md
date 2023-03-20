@@ -83,4 +83,5 @@ Observations:
   
 ## Analyze
 The data is stored appropriately and is prepared for analysis.
-The analysis question is: How do annual members and casual riders use Cyclistic bikes differently?
+The analysis question is: How do annual members and casual riders use Cyclistic bikes differently?  
+
