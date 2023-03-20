@@ -65,7 +65,7 @@ Observations:
 
    ![image](https://user-images.githubusercontent.com/125132307/226203372-10c60802-0880-4b17-9ac0-2177ab862974.png)
 
-6. The __started_at__ and __ended_at__ shows start and end time of the trip in YYYY-MM-DD hh:mm:ss UTC format. New column ride_length can be created to find the total trip duration. As for now, there is no trip which has duration longer than a day. However, there are 127793 trips having less than a minute duration or having end time earlier than start time so need to remove them. Another column day_of_week can also be helpful in analysis of trips at different days in a week.
+6. The __started_at__ and __ended_at__ shows start and end time of the trip in YYYY-MM-DD hh:mm:ss UTC format. New column ride_length can be created to find the total trip duration. As for now, there is no trip which has duration longer than a day. However, there are 127793 trips having less than a minute duration or having end time earlier than start time so need to remove them. Other columns day_of_week and month can also be helpful in analysis of trips at different times in a year.
 7. Total of 833064 rows have both __start_station_name__ and __start_station_id__ missing which needs to be removed.  
 8. Total of 892742 rows have both __end_station_name__ and __end_station_id__ missing which needs to be removed.
 9. Total of 5858 rows have both __end_lat__ and __end_lng__ missing which needs to be removed.
@@ -73,5 +73,11 @@ Observations:
 
     ![image](https://user-images.githubusercontent.com/125132307/226212522-aec43490-5d86-4e2e-a92e-b3bf52050415.png)
 
-11. Columns that need to be removed are start_station_id and end_station_id. Longitude and latitude location columns may not be used in analysis but can be used to visualise a map.
+11. Columns that need to be removed are start_station_id and end_station_id as they do not add value to analysis of our current problem. Longitude and latitude location columns may not be used in analysis but can be used to visualise a map.
+
+### Data Cleaning
+1. All the rows having missing values are deleted.  
+2. 3 more columns ride_length for duration of the trip, day_of_week and month are added.  
+3. Trips with duration less than a minute are excluded.
+4. Total 1,453,790 rows are removed in this step.
    
