@@ -65,7 +65,7 @@ Observations:
 
    ![image](https://user-images.githubusercontent.com/125132307/226203372-10c60802-0880-4b17-9ac0-2177ab862974.png)
 
-6. The __started_at__ and __ended_at__ shows start and end time of the trip in YYYY-MM-DD hh:mm:ss UTC format. New column ride_length can be created to find the total trip duration. As for now, there is no trip which has duration longer than a day. However, there are 127793 trips having less than a minute duration or having end time earlier than start time so need to remove them. Other columns day_of_week and month can also be helpful in analysis of trips at different times in a year.
+6. The __started_at__ and __ended_at__ shows start and end time of the trip in YYYY-MM-DD hh:mm:ss UTC format. New column ride_length can be created to find the total trip duration. There are 5360 trips which has duration longer than a day and 122283 trips having less than a minute duration or having end time earlier than start time so need to remove them. Other columns day_of_week and month can also be helpful in analysis of trips at different times in a year.
 7. Total of 833064 rows have both __start_station_name__ and __start_station_id__ missing which needs to be removed.  
 8. Total of 892742 rows have both __end_station_name__ and __end_station_id__ missing which needs to be removed.
 9. Total of 5858 rows have both __end_lat__ and __end_lng__ missing which needs to be removed.
@@ -78,6 +78,9 @@ Observations:
 ### Data Cleaning
 1. All the rows having missing values are deleted.  
 2. 3 more columns ride_length for duration of the trip, day_of_week and month are added.  
-3. Trips with duration less than a minute are excluded.
-4. Total 1,453,790 rows are removed in this step.
-   
+3. Trips with duration less than a minute and longer than a day are excluded.
+4. Total 1,375,912 rows are removed in this step.
+  
+## Analyze
+The data is stored appropriately and is prepared for analysis.
+The analysis question is: How do annual members and casual riders use Cyclistic bikes differently?
