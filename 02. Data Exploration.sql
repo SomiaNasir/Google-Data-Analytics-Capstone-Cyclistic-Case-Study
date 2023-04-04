@@ -1,8 +1,10 @@
+-- Data Exploration
+
 -- checking the data types of all columns
 
 SELECT column_name, data_type
 FROM `2022_tripdata`.INFORMATION_SCHEMA.COLUMNS
-WHERE table_name = '202201_tripdata';
+WHERE table_name = 'combined_data';
 
 -- checking for number of null values in all columns
 
@@ -46,12 +48,18 @@ LIMIT 10;
 
 SELECT COUNT(*) AS longer_than_a_day
 FROM `2022_tripdata.combined_data`
-WHERE EXTRACT(MINUTE FROM (ended_at - started_at)) >= 1440;   -- longer than a day - there are none
+WHERE (
+  EXTRACT(HOUR FROM (ended_at - started_at)) * 60 +
+  EXTRACT(MINUTE FROM (ended_at - started_at)) +
+  EXTRACT(SECOND FROM (ended_at - started_at)) / 60) >= 1440;   -- longer than a day - total rows = 5360
 
 SELECT COUNT(*) AS less_than_a_minute
 FROM `2022_tripdata.combined_data`
-WHERE EXTRACT(MINUTE FROM (ended_at - started_at)) <= 0;      -- less than a minute - total rows = 127793
-                                                              -- minute as a whole number is returned, comparing with 0 means 0 min 59 sec
+WHERE (
+  EXTRACT(HOUR FROM (ended_at - started_at)) * 60 +
+  EXTRACT(MINUTE FROM (ended_at - started_at)) +
+  EXTRACT(SECOND FROM (ended_at - started_at)) / 60) <= 1;      -- less than a minute - total rows = 122283
+
 -- start_station_name, start_station_id - total 833064 rows with both start station name and id missing
 
 SELECT DISTINCT start_station_name
