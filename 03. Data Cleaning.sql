@@ -5,8 +5,9 @@ DROP TABLE IF EXISTS `2022_tripdata.cleaned_combined_data`;
 -- creating new table with clean data
 
 CREATE TABLE IF NOT EXISTS `2022_tripdata.cleaned_combined_data` AS (
-  SELECT ride_id, rideable_type, started_at, ended_at, 
-    EXTRACT(MINUTE FROM (ended_at - started_at)) AS ride_length,
+  SELECT 
+    a.ride_id, rideable_type, started_at, ended_at, 
+    ride_length,
     CASE EXTRACT(DAYOFWEEK FROM started_at) 
       WHEN 1 THEN 'SUN'
       WHEN 2 THEN 'MON'
@@ -32,20 +33,25 @@ CREATE TABLE IF NOT EXISTS `2022_tripdata.cleaned_combined_data` AS (
     END AS month,
     start_station_name, end_station_name, 
     start_lat, start_lng, end_lat, end_lng, member_casual
-  FROM `2022_tripdata.combined_data`
-  WHERE start_station_name IS NOT NULL AND
+  FROM `2022_tripdata.combined_data` a
+  JOIN (
+    SELECT ride_id, (
+      EXTRACT(HOUR FROM (ended_at - started_at)) * 60 +
+      EXTRACT(MINUTE FROM (ended_at - started_at)) +
+      EXTRACT(SECOND FROM (ended_at - started_at)) / 60) AS ride_length
+    FROM `2022_tripdata.combined_data`
+  ) b 
+  ON a.ride_id = b.ride_id
+  WHERE 
+    start_station_name IS NOT NULL AND
     end_station_name IS NOT NULL AND
     end_lat IS NOT NULL AND
     end_lng IS NOT NULL AND
-    EXTRACT(MINUTE FROM (ended_at - started_at)) > 1
+    ride_length > 1 AND ride_length < 1440
 );
 
 ALTER TABLE `2022_tripdata.cleaned_combined_data`     -- set ride_id as primary key
 ADD PRIMARY KEY(ride_id) NOT ENFORCED;
 
-SELECT *
-FROM `2022_tripdata.cleaned_combined_data`
-LIMIT 10;
-
-SELECT COUNT(ride_id) AS no_of_rows       -- returned 4,213,927 rows so 1,453,790 rows removed
+SELECT COUNT(ride_id) AS no_of_rows       -- returned 4,291,805 rows so 1,375,912 rows removed
 FROM `2022_tripdata.cleaned_combined_data`;
