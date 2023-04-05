@@ -102,9 +102,9 @@ __Hours of the Day:__ The members shows 2 peaks throughout the day in terms of n
 We can infer from the previous observations that member may be using bikes for commuting to and from the work in the week days while casual riders are using bikes throughout the day, more frequently over the weekends for leisure purposes.  
   
 Ride duration of the trips are compared to find the differences in the behavior of casual and member riders.  
-![image](https://user-images.githubusercontent.com/125132307/230153044-c854ad08-9efa-41f2-acbd-0b52916e2b97.png)  
-![image](https://user-images.githubusercontent.com/125132307/230153192-057540fd-6c7d-443d-8283-a5896852341e.png)  
+![image](https://user-images.githubusercontent.com/125132307/230164787-3ea46ee9-aa5f-486b-9dd1-8f43dfce8e1c.png)  
+![image](https://user-images.githubusercontent.com/125132307/230164889-1c7943d2-7ada-411b-adc7-a043eb480ba1.png)
   
-n
-
-
+Note that the average ride duration is higher for casual rider when compared with members and average ride duration for members remain constant throughout the year, week and day. However there are fluctuations in the ride duration of casual riders 
+  
+From these observations, it can be said that casual riders make longer but less trips than members.
