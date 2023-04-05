@@ -97,7 +97,7 @@ Next the number of trips distributed by the months, days of the week and hours o
   
 __Months:__ When it comes to monthly trips, both casual and members exhibit comparable behavior, with more trips in the spring and summer and fewer in the winter. The gap between casuals and members is closest in the month of july in summmer.   
 __Days of Week:__ When the days of the week are compared, it is discovered that casual riders make more journeys on the weekends while members show a decline over the weekend in contrast to the other days of the week.  
-__Hours of the Day:__ The members shows 2 peaks throughout the day in terms of number of trips. One is in early in morning at around 6 am to 8 am and other is in the evening at around 4 pm to 8 pm while number of trips for casual riders increase consistently over the day till evening and then decrease afterwards.  
+__Hours of the Day:__ The members shows 2 peaks throughout the day in terms of number of trips. One is in early in the morning at around 6 am to 8 am and other is in the evening at around 4 pm to 8 pm while number of trips for casual riders increase consistently over the day till evening and then decrease afterwards.  
   
 We can infer from the previous observations that member may be using bikes for commuting to and from the work in the week days while casual riders are using bikes throughout the day, more frequently over the weekends for leisure purposes.  
   
@@ -105,6 +105,6 @@ Ride duration of the trips are compared to find the differences in the behavior 
 ![image](https://user-images.githubusercontent.com/125132307/230164787-3ea46ee9-aa5f-486b-9dd1-8f43dfce8e1c.png)  
 ![image](https://user-images.githubusercontent.com/125132307/230164889-1c7943d2-7ada-411b-adc7-a043eb480ba1.png)
   
-Note that the average ride duration is higher for casual rider when compared with members and average ride duration for members remain constant throughout the year, week and day. However there are fluctuations in the ride duration of casual riders 
+Take note that casual riders tend to cycle longer than members do on average. The length of the average journey for members doesn't change throughout the year, week, or day. However, there are variations in how long casual riders cycle. In the spring and summer, on weekends, and from 10 am to 2 pm during the day, they travel greater distances. Between five and eight in the morning, they have brief trips.
   
-From these observations, it can be said that casual riders make longer but less trips than members.
+These findings lead to the conclusion that casual commuters travel longer but less frequently than members. They make longer journeys on weekends and during the day outside of commuting hours and in spring and summer season, so they might be doing so for recreation.
