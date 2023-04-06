@@ -100,7 +100,7 @@ __Months:__ When it comes to monthly trips, both casual and members exhibit comp
 __Days of Week:__ When the days of the week are compared, it is discovered that casual riders make more journeys on the weekends while members show a decline over the weekend in contrast to the other days of the week.  
 __Hours of the Day:__ The members shows 2 peaks throughout the day in terms of number of trips. One is in early in the morning at around 6 am to 8 am and other is in the evening at around 4 pm to 8 pm while number of trips for casual riders increase consistently over the day till evening and then decrease afterwards.  
   
-We can infer from the previous observations that member may be using bikes for commuting to and from the work in the week days while casual riders are using bikes throughout the day, more frequently over the weekends for leisure purposes.  
+We can infer from the previous observations that member may be using bikes for commuting to and from the work in the week days while casual riders are using bikes throughout the day, more frequently over the weekends for leisure purposes. Both are most active in summer and spring.  
   
 Ride duration of the trips are compared to find the differences in the behavior of casual and member riders.  
   
@@ -109,7 +109,7 @@ Ride duration of the trips are compared to find the differences in the behavior 
   
 Take note that casual riders tend to cycle longer than members do on average. The length of the average journey for members doesn't change throughout the year, week, or day. However, there are variations in how long casual riders cycle. In the spring and summer, on weekends, and from 10 am to 2 pm during the day, they travel greater distances. Between five and eight in the morning, they have brief trips.
   
-These findings lead to the conclusion that casual commuters travel longer but less frequently than members. They make longer journeys on weekends and during the day outside of commuting hours and in spring and summer season, so they might be doing so for recreation.  
+These findings lead to the conclusion that casual commuters travel longer (approximately 2x more) but less frequently than members. They make longer journeys on weekends and during the day outside of commuting hours and in spring and summer season, so they might be doing so for recreation.  
   
 To further understand the differences in casual and member riders, locations of starting and ending stations can be analysed. Stations with the most trips are considered using filters to draw out the following conclusions.  
   
@@ -122,5 +122,13 @@ Casual riders have frequently started their trips from the stations in vicinity 
 Similar trend can be observed in ending station locations. Casual riders end their journay near parks, museums and other recreational sites whereas members end their trips close to universities, residential and commmercial areas. So this proves that casual riders use bikes for leisure activities while members extensively rely on them for daily commute.  
   
 Summary:
-
+  
+|Casual|Member|
+|------|------|
+|Prefer using bikes throughout the day, more frequently over the weekends in summer and spring for leisure activities.|Prefer riding bikes on week days during commute hours (8 am / 5pm) in summer and spring.|
+|Travel 2 times longer but less frequently than members.|Travel more frequently but shorter rides (approximately half of casual riders' trip duration).|
+|Start and end their journeys near parks, museums, along the coast and other recreational sites|Start and end their trips close to universities, residential and commercial areas.|  
+  
+## Act
+Now that differences between the casual and member riders are identified so
 
