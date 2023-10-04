@@ -1,6 +1,6 @@
 -- Data Combining
 
-DROP TABLE IF EXISTS `2022_tripdata.combined_data`;
+DROP TABLE IF EXISTS `202_tripdata.combined_data`;
 
 -- combining all the 12 months data tables into a single table containing data from Jan 2022 to Dec 2022.
 
