@@ -1,37 +1,35 @@
 -- Data Combining
 
-DROP TABLE IF EXISTS `2022_tripdata.combined_data`;
+DROP TABLE IF EXISTS `project-30-10-2023.combined_data`
 
--- combining all the 12 months data tables into a single table containing data from Jan 2022 to Dec 2022.
+--combinig all that of 12 months from 2023 into single table for 2023
 
-CREATE TABLE IF NOT EXISTS `2022_tripdata.combined_data` AS (
-  SELECT * FROM `2022_tripdata.202201_tripdata`
+CREATE TABLE IF NOT EXISTS `Cyclistic.combined_data_2023`
+AS (
+  SELECT * FROM `Cyclistic.2023_01`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202202_tripdata`
+  SELECT * FROM `Cyclistic.2023_02`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202203_tripdata`
+  SELECT * FROM `Cyclistic.2023_03`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202204_tripdata`
+  SELECT * FROM `Cyclistic.2023_04`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202205_tripdata`
+  SELECT * FROM `Cyclistic.2023_05`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202206_tripdata`
+  SELECT * FROM `Cyclistic.2023_06`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202207_tripdata`
+  SELECT * FROM `Cyclistic.2023_07`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202208_tripdata`
+  SELECT * FROM `Cyclistic.2023_08`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202209_tripdata`
+  SELECT * FROM `Cyclistic.2023_09`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202210_tripdata`
+  SELECT * FROM `Cyclistic.2023_10`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202211_tripdata`
+  SELECT * FROM `Cyclistic.2023_11`
   UNION ALL
-  SELECT * FROM `2022_tripdata.202212_tripdata`
+  SELECT * FROM `Cyclistic.2023_12`
 );
 
--- checking no of rows which are 5667717
 
-SELECT COUNT(*)
-FROM `2022_tripdata.combined_data`;
 
